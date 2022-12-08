@@ -2,7 +2,7 @@ Vagrant.configure("2") do |config|
 
     config.vm.box = "centos/7"
   
-    config.vm.provision "shell", run: "always",  inline: <<-SHELL
+    config.vm.provision "shell", inline: <<-SHELL
 	      mkdir /etc/folder1
         mkdir /etc/folder2
         cp /vagrant/mv.service /etc/systemd/system/mv.service
